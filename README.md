@@ -147,17 +147,6 @@ How to Run This Project
    ```bash
    Make sure your virtual environment is activated, then install all required packages using:
    pip install -r requirements.txt
-1. Clone the repository:
-   git clone https://github.com/yourusername/Cardiovascular-Diseases-Risk-Prediction.git
-
-2. Install the required libraries:
-   pip install -r requirements.txt
-
-3. Train the models:
-   python train_models.py
-
-4. Run SHAP analysis:
-   python shap_analysis.py
 
 ---------------------------------------
 References for Synthetic Data Assumptions
