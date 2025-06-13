@@ -1,5 +1,5 @@
-Cardiovascular Diseases Risk Prediction
-=======================================
+Cardiovascular Diseases Risk Prediction post COVID-19 Vaccine and Myocarditis Risk Analysis
+============================================================================================
 
 This project focuses on building predictive models to assess the risk of cardiovascular diseases (CVD) using machine learning. By leveraging both realistic and synthetic data, we aim to identify key health and lifestyle factors contributing to cardiovascular conditions—especially in the context of recent global health events like COVID-19 and vaccination drives.
 
@@ -67,29 +67,34 @@ Models were evaluated using:
 - F1 Macro Score (Train and Test)
 - ROC-AUC Score (Train and Test)
 
----------------------------------------
-Results Summary
----------------------------------------
 
-Model                    | Train Acc | Test Acc
------------------------- | --------- | --------
-Logistic Regression      | 0.6468    | 0.6525
-Tuned Logistic Regression| 0.6468    | 0.6525
-KNN                      | 0.8397    | 0.6249
-Linear SVM               | 0.7314    | 0.7226
-SVM Tuned                | 0.6461    | 0.6515
-Decision Tree            | 0.7052    | 0.7174
-Decision Tree Tuned      | 0.7426    | 0.7455
-Random Forest            | 0.7707    | 0.7414
-XGBoost                  | 0.8312    | 0.7505
-XGBoost Tuned            | 0.8274    | 0.7507
-Naive Bayes              | 0.6625    | 0.6792
-Naive Bayes Tuned        | 0.6641    | 0.6902
-Neural Network           | 0.7061    | 0.7073
-NN + BayesSearch         | 0.7016    | 0.7233
+Model Performance Summary:
+--------------------------
+Model                        | Prec. Train | Prec. Test | Recall Train | Recall Test | Acc. Train | Acc. Test | ROC-AUC Train | ROC-AUC Test | F1 Train | F1 Test
+----------------------------|-------------|------------|--------------|-------------|------------|-----------|----------------|---------------|----------|---------
+Logistic Regression         | 0.6483      | 0.6664     | 0.6468       | 0.6525      | 0.6468     | 0.6525    | 0.6468         | 0.6355        | 0.6458   | 0.6575
+Tuned Logistic Regression   | 0.6483      | 0.6664     | 0.6468       | 0.6525      | 0.6468     | 0.6525    | 0.6468         | 0.6355        | 0.6458   | 0.6575
+KNN                         | 0.8468      | 0.6490     | 0.8397       | 0.6249      | 0.8397     | 0.6249    | 0.8397         | 0.6161        | 0.8388   | 0.6324
+Linear SVM                  | 0.7239      | 0.7132     | 0.7314       | 0.7226      | 0.7314     | 0.7226    | 0.6637         | 0.6527        | 0.7135   | 0.7036
+Tuned SVM                   | 0.6476      | 0.6656     | 0.6461       | 0.6515      | 0.6461     | 0.6515    | 0.6461         | 0.6346        | 0.6452   | 0.6566
+Regular Decision Tree       | 0.7195      | 0.7089     | 0.7052       | 0.7174      | 0.7052     | 0.7174    | 0.7052         | 0.6694        | 0.7004   | 0.7106
+Tuned Decision Tree         | 0.7803      | 0.7443     | 0.7426       | 0.7455      | 0.7426     | 0.7455    | 0.7426         | 0.6687        | 0.7336   | 0.7231
+Regular Random Forest       | 0.7952      | 0.7356     | 0.7707       | 0.7414      | 0.7707     | 0.7414    | 0.7707         | 0.6711        | 0.7658   | 0.7231
+XGBoost                     | 0.8596      | 0.7693     | 0.8312       | 0.7505      | 0.8312     | 0.7505    | 0.8312         | 0.6587        | 0.8278   | 0.7172
+Tuned XGBoost               | 0.8561      | 0.7683     | 0.8274       | 0.7507      | 0.8274     | 0.7507    | 0.8274         | 0.6596        | 0.8239   | 0.7180
+Naive Bayes                 | 0.6682      | 0.6807     | 0.6625       | 0.6792      | 0.6625     | 0.6792    | 0.6625         | 0.6489        | 0.6596   | 0.6799
+Tuned Naive Bayes           | 0.6747      | 0.6855     | 0.6641       | 0.6902      | 0.6641     | 0.6902    | 0.6641         | 0.6506        | 0.6590   | 0.6874
+Neural Network              | 0.7174      | 0.7014     | 0.7061       | 0.7073      | 0.7061     | 0.7073    | 0.7061         | 0.6661        | 0.7023   | 0.7035
+BayesSearch NN              | 0.7240      | 0.7136     | 0.7016       | 0.7233      | 0.7016     | 0.7233    | 0.7016         | 0.6688        | 0.6940   | 0.7135
+Tuned Neural Network        | 0.7240      | 0.7136     | 0.7016       | 0.7233      | 0.7016     | 0.7233    | 0.7016         | 0.6688        | 0.6940   | 0.7135
 
 Best Model:
-- Tuned XGBoost with well-balanced test accuracy, ROC-AUC, and F1 score.
+-----------
+Tuned XGBoost
+- Accuracy (Test): 0.7507
+- F1 Score (Test): 0.7180
+- ROC-AUC (Test): 0.6596
+
 
 ---------------------------------------
 Model Interpretability with SHAP
@@ -128,6 +133,20 @@ Future Work
 How to Run This Project
 ---------------------------------------
 
+1. **Clone the repository**:
+   ```bash
+   git clone [https://github.com/yourusername/Cardiovascular-Diseases-Risk-Prediction.git]
+   cd energy-_forecasting-using-linear-models
+2. ** Set Up a Virtual Environment**
+   ```bash
+   🔹 On Windows
+    python -m venv p1env
+    env\Scripts\activate
+
+3. Install Required Libraries
+   ```bash
+   Make sure your virtual environment is activated, then install all required packages using:
+   pip install -r requirements.txt
 1. Clone the repository:
    git clone https://github.com/yourusername/Cardiovascular-Diseases-Risk-Prediction.git
 
